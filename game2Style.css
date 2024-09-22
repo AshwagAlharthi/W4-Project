@@ -1,0 +1,574 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: #ffffff;
+    /* #4ca8a7; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    user-select: none;
+}
+
+.navbar {
+    width: 100%;
+    height: 10vh;
+    background-color: #efedf0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-image {
+    width: 30vw;
+    height: 10vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-image img {
+    width: 50%;
+    height: 80%;
+}
+
+.before-display{
+    width: 50vw;
+    height: 90vh;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.level-container{
+    width: 30vw;
+    height: 50vh;
+    border-radius: 50%;
+    background-color: #efedf0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #2e7950;
+    gap: 2rem;
+}
+.content{
+    display: none;
+    height: 100vh;
+}
+
+/* game */
+.image-container {
+    width: 50vw;
+    height: 90vh;
+    /* height: 50vh; */
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border-radius: 15px; */
+}
+
+.timer {
+    color: #2e7950;
+}
+
+.timeout-div {
+    width: 50vw;
+    height: 50vh;
+    background-image: url('https://i.pinimg.com/originals/35/76/f1/3576f1df24e20af5bc43777b9a5ddc98.gif');
+    background-size: cover;
+    /* background-color: #efedf0; */
+    /* #efedf0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    direction: rtl;
+}
+
+
+.game-image {
+    width: 50vw;
+    height: 70vh;
+    /* background-color: rgb(111, 183, 246); */
+    position: relative;
+}
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.camel-image {
+    position: absolute;
+    bottom: 1vh;
+    right: 3vw;
+    width: 3vw;
+    height: 4vh;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.dallah-image {
+    position: absolute;
+    bottom: 5vh;
+    left: 18.5vw;
+    width: 2vw;
+    height: 3vh;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.princess-image {
+    position: absolute;
+    bottom: 4vh;
+    right: 22vw;
+    width: 1vw;
+    height: 3vh;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.sword-image {
+    position: absolute;
+    bottom: 21.5vh;
+    right: 12.5vw;
+    width: 3vw;
+    height: 4vh;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.saudiLogo-image {
+    position: absolute;
+    bottom: 8vh;
+    left: 11vw;
+    width: 2vw;
+    height: 3vh;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.saudiFlag2-image {
+    position: absolute;
+    bottom: 14vh;
+    right: 8.3vw;
+    width: 2vw;
+    height: 5vh;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.camel-image img,
+.dallah-image img,
+.princess-image img,
+.sword-image img,
+.saudiLogo-image img,
+.saudiFlag2-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.score-container {
+    width: 15vw;
+    height: 10vh;
+    /* background-color: rgb(219, 246, 111); */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    direction: rtl;
+}
+
+.grade{
+    width: 8vw;
+    height: 6vh;
+    /* background-color: #efedf0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #2e7950;
+    border-radius: 15px ;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        width: 100%;
+        height: 10vh;
+        background-color: #efedf0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .navbar-image {
+        width: 40vw;
+        height: 10vh;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-image img {
+        width: 50%;
+        height: 80%;
+    }
+
+    .before-display {
+        width: 90vw;
+        height: 90vh;
+        /* background-color: aliceblue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .level-container {
+        width: 70vw;
+        height: 50vh;
+        border-radius: 50%;
+        background-color: #efedf0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #2e7950;
+        gap: 2rem;
+    }
+
+    .content {
+        display: none;
+        height: 100vh;
+    }
+
+    /* game */
+    .image-container {
+        width: 90vw;
+        height: 90vh;
+        /* height: 50vh; */
+        /* background-color: aliceblue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        /* border-radius: 15px; */
+    }
+
+    .timer {
+        color: #2e7950;
+    }
+
+    .game-image {
+        width: 90vw;
+        height: 70vh;
+        /* background-color: rgb(111, 183, 246); */
+        position: relative;
+    }
+
+    .game-image img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .timeout-div {
+        width: 70vw;
+        height: 50vh;
+        background-image: url('https://i.pinimg.com/originals/35/76/f1/3576f1df24e20af5bc43777b9a5ddc98.gif');
+        background-size: cover;
+        /* background-color: #efedf0; */
+        /* #efedf0; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        direction: rtl;
+    }
+        
+    .camel-image {
+        position: absolute;
+        bottom: 0.4vh;
+        right: 5vw;
+        width: 5vw;
+        height: 5vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+    
+    .dallah-image {
+        position: absolute;
+        bottom: 4vh;
+        left: 33.5vw;
+        width: 3.5vw;
+        height: 3vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+    
+    .princess-image {
+        position: absolute;
+        bottom: 4vh;
+        right: 39vw;
+        width: 2vw;
+        height: 3.5vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+    
+    .sword-image {
+        position: absolute;
+        bottom: 21vh;
+        right: 22.5vw;
+        width: 7vw;
+        height: 5vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+    
+    .saudiLogo-image {
+        position: absolute;
+        bottom: 8vh;
+        left: 19.5vw;
+        width: 3.5vw;
+        height: 4vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+    
+    .saudiFlag2-image {
+        position: absolute;
+        bottom: 14vh;
+        right: 15vw;
+        width: 3.5vw;
+        height: 6vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+    
+    .camel-image img,
+    .dallah-image img,
+    .princess-image img,
+    .sword-image img,
+    .saudiLogo-image img,
+    .saudiFlag2-image img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .score-container {
+        width: 35vw;
+        height: 10vh;
+        /* background-color: rgb(219, 246, 111); */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        direction: rtl;
+    }
+
+    .grade {
+        width: 18vw;
+        height: 6vh;
+        /* background-color: #efedf0; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #2e7950;
+        border-radius: 15px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    .navbar {
+        width: 100%;
+        height: 10vh;
+        background-color: #efedf0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .navbar-image {
+        width: 30vw;
+        height: 10vh;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-image img {
+        width: 50%;
+        height: 80%;
+    }
+
+    .before-display {
+        width: 60vw;
+        height: 90vh;
+        /* background-color: aliceblue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .level-container {
+        width: 50vw;
+        height: 50vh;
+        border-radius: 50%;
+        background-color: #efedf0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #2e7950;
+        gap: 2rem;
+    }
+
+    .content {
+        display: none;
+        height: 100vh;
+    }
+
+    /* game */
+    .image-container {
+        width: 80vw;
+        height: 90vh;
+        /* height: 50vh; */
+        /* background-color: aliceblue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        /* border-radius: 15px; */
+    }
+
+    .timer {
+        color: #2e7950;
+    }
+
+    .game-image {
+        width: 80vw;
+        height: 70vh;
+        /* background-color: rgb(111, 183, 246); */
+        position: relative;
+    }
+
+    .game-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .timeout-div {
+        width: 70vw;
+        height: 50vh;
+        background-image: url('https://i.pinimg.com/originals/35/76/f1/3576f1df24e20af5bc43777b9a5ddc98.gif');
+        background-size: cover;
+        /* background-color: #efedf0; */
+        /* #efedf0; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        direction: rtl;
+    }
+        
+    .camel-image {
+        position: absolute;
+        bottom: 0.4vh;
+        right: 5vw;
+        width: 4.5vw;
+        height: 4.5vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+    
+    .dallah-image {
+        position: absolute;
+        bottom: 4.5vh;
+        left: 30vw;
+        width: 3vw;
+        height: 3vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+    
+    .princess-image {
+        position: absolute;
+        bottom: 4vh;
+        right: 35vw;
+        width: 1.5vw;
+        height: 3.5vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+    
+    .sword-image {
+        position: absolute;
+        bottom: 21vh;
+        right: 20vw;
+        width: 5vw;
+        height: 4vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+    
+    .saudiLogo-image {
+        position: absolute;
+        bottom: 8vh;
+        left: 17.3vw;
+        width: 3vw;
+        height: 3.5vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+    
+    .saudiFlag2-image {
+        position: absolute;
+        bottom: 14vh;
+        right: 13vw;
+        width: 3.5vw;
+        height: 6vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+    
+    .camel-image img,
+    .dallah-image img,
+    .princess-image img,
+    .sword-image img,
+    .saudiLogo-image img,
+    .saudiFlag2-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .score-container {
+        width: 30vw;
+        height: 10vh;
+        /* background-color: rgb(219, 246, 111); */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        direction: rtl;
+    }
+
+    .grade {
+        width: 14vw;
+        height: 6vh;
+        /* background-color: #efedf0; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #2e7950;
+        border-radius: 15px;
+    }
+}

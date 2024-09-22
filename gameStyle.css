@@ -1,0 +1,544 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: #ffffff;
+    /* #4ca8a7; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    user-select: none;
+}
+
+.navbar {
+    width: 100%;
+    height: 10vh;
+    background-color: #efedf0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-image {
+    width: 30vw;
+    height: 10vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-image img {
+    width: 50%;
+    height: 80%;
+}
+
+.before-display {
+    width: 50vw;
+    height: 90vh;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.level-container {
+    width: 30vw;
+    height: 50vh;
+    border-radius: 50%;
+    background-color: #efedf0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #2e7950;
+    gap: 2rem;
+}
+
+.content {
+    display: none;
+    height: 100vh;
+}
+
+/* game */
+.image-container {
+    width: 50vw;
+    height: 90vh;
+    /* height: 50vh; */
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border-radius: 15px; */
+}
+
+.timer {
+    color: #2e7950;
+}
+
+.game-image {
+    width: 50vw;
+    height: 70vh;
+    /* background-color: rgb(111, 183, 246); */
+    position: relative;
+}
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.airplane-image {
+    position: absolute;
+    top: 1vh;
+    left: 8vw;
+    width: 3vw;
+    height: 4vh;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.clockTower-image {
+    position: absolute;
+    top: 12vh;
+    right: 4vw;
+    width: 3vw;
+    height: 9vh;
+    /* border: 2px solid #2e7950; */
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.saudiFlag-image {
+    position: absolute;
+    top: 15vh;
+    left: 18vw;
+    width: 2vw;
+    height: 4vh;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.almasmak-image {
+    position: absolute;
+    top: 18vh;
+    right: 20.5vw;
+    width: 2vw;
+    height: 4vh;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.almamlakah-image {
+    position: absolute;
+    top: 25vh;
+    left: 8.5vw;
+    width: 0.8vw;
+    height: 2.5vh;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.palm-image {
+    position: absolute;
+    /* bottom: 30vh;
+    right: 7vw;
+    width: 2vw;
+    height: 5vh; */
+    bottom: 15vh;
+    left: 2vw;
+    width: 4vw;
+    height: 6vh;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.score-container {
+    width: 15vw;
+    height: 10vh;
+    /* background-color: rgb(219, 246, 111); */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    direction: rtl;
+}
+
+.airplane-image img,
+.clockTower-image img,
+.saudiFlag-image img,
+.almasmak-image img,
+.almamlakah-image img,
+.palm-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.grade {
+    width: 8vw;
+    height: 6vh;
+    /* background-color: #efedf0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #2e7950;
+    border-radius: 15px;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        width: 100%;
+        height: 10vh;
+        background-color: #efedf0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .navbar-image {
+        width: 40vw;
+        height: 10vh;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-image img {
+        width: 50%;
+        height: 80%;
+    }
+
+    .before-display {
+        width: 90vw;
+        height: 90vh;
+        /* background-color: aliceblue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .level-container {
+        width: 70vw;
+        height: 50vh;
+        border-radius: 50%;
+        background-color: #efedf0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #2e7950;
+        gap: 2rem;
+    }
+
+    .content {
+        display: none;
+        height: 100vh;
+    }
+
+    /* game */
+    .image-container {
+        width: 90vw;
+        height: 90vh;
+        /* height: 50vh; */
+        /* background-color: aliceblue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        /* border-radius: 15px; */
+    }
+
+    .timer {
+        color: #2e7950;
+    }
+
+    .game-image {
+        width: 90vw;
+        height: 70vh;
+        /* background-color: rgb(111, 183, 246); */
+        position: relative;
+    }
+
+    .game-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .airplane-image {
+        position: absolute;
+        top: 1vh;
+        left: 15vw;
+        width: 6vw;
+        height: 5vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+
+    .clockTower-image {
+        position: absolute;
+        top: 12vh;
+        right: 7vw;
+        width: 4vw;
+        height: 9vh;
+        /* border: 2px solid #2e7950; */
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+
+    .saudiFlag-image {
+        position: absolute;
+        top: 15vh;
+        left: 32vw;
+        width: 4vw;
+        height: 4vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+
+    .almasmak-image {
+        position: absolute;
+        top: 18vh;
+        right: 37vw;
+        width: 4vw;
+        height: 4vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+
+    .almamlakah-image {
+        position: absolute;
+        top: 25vh;
+        left: 15vw;
+        width: 2vw;
+        height: 3vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+
+    .palm-image {
+        position: absolute;
+        /* bottom: 18vh;
+        left: 7vw;
+        width: 8vw;
+        height: 7vh; */
+        bottom: 15vh;
+        left: 3vw;
+        width: 8vw;
+        height: 6vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+
+    .airplane-image img,
+    .clockTower-image img,
+    .saudiFlag-image img,
+    .almasmak-image img,
+    .almamlakah-image img,
+    .palm-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .score-container {
+        width: 35vw;
+        height: 10vh;
+        /* background-color: rgb(219, 246, 111); */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        direction: rtl;
+    }
+
+    .grade {
+        width: 18vw;
+        height: 6vh;
+        /* background-color: #efedf0; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #2e7950;
+        border-radius: 15px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    .navbar {
+        width: 100%;
+        height: 10vh;
+        background-color: #efedf0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .navbar-image {
+        width: 30vw;
+        height: 10vh;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-image img {
+        width: 50%;
+        height: 80%;
+    }
+
+    .before-display {
+        width: 60vw;
+        height: 90vh;
+        /* background-color: aliceblue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .level-container {
+        width: 50vw;
+        height: 50vh;
+        border-radius: 50%;
+        background-color: #efedf0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #2e7950;
+        gap: 2rem;
+    }
+
+    .content {
+        display: none;
+        height: 100vh;
+    }
+
+    /* game */
+    .image-container {
+        width: 80vw;
+        height: 90vh;
+        /* height: 50vh; */
+        /* background-color: aliceblue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        /* border-radius: 15px; */
+    }
+
+    .timer {
+        color: #2e7950;
+    }
+
+    .game-image {
+        width: 80vw;
+        height: 70vh;
+        /* background-color: rgb(111, 183, 246); */
+        position: relative;
+    }
+
+    .game-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .airplane-image {
+        position: absolute;
+        top: 1vh;
+        left: 13vw;
+        width: 5.5vw;
+        height: 4.5vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+
+    .clockTower-image {
+        position: absolute;
+        top: 12vh;
+        right: 6.5vw;
+        width: 4vw;
+        height: 9vh;
+        /* border: 2px solid #2e7950; */
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+
+    .saudiFlag-image {
+        position: absolute;
+        top: 15vh;
+        left: 28vw;
+        width: 4vw;
+        height: 4vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+
+    .almasmak-image {
+        position: absolute;
+        top: 18vh;
+        right: 32.5vw;
+        width: 3.5vw;
+        height: 4vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+
+    .almamlakah-image {
+        position: absolute;
+        top: 25vh;
+        left: 13vw;
+        width: 2vw;
+        height: 3vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+
+    .palm-image {
+        position: absolute;
+        bottom: 15vh;
+        left: 3vw;
+        width: 6vw;
+        height: 6vh;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+
+    .airplane-image img,
+    .clockTower-image img,
+    .saudiFlag-image img,
+    .almasmak-image img,
+    .almamlakah-image img,
+    .palm-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .score-container {
+        width: 30vw;
+        height: 10vh;
+        /* background-color: rgb(219, 246, 111); */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        direction: rtl;
+    }
+
+    .grade {
+        width: 14vw;
+        height: 6vh;
+        /* background-color: #efedf0; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #2e7950;
+        border-radius: 15px;
+    }
+}
