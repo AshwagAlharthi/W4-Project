@@ -1,17 +1,9 @@
-if((localStorage.getItem('firstScore'))){
-  localStorage.removeItem('firstScore')
-}
-
-if((localStorage.getItem('secondScore'))){
-  localStorage.removeItem('secondScore')
-}
-
-if((localStorage.getItem('playerId'))){
+if ((localStorage.getItem('playerId'))) {
   localStorage.removeItem('playerId')
 }
 
-if((localStorage.getItem('playerName'))){
-  localStorage.removeItem('playerName')
+if ((localStorage.getItem('timesUp'))) {
+  localStorage.removeItem('timesUp')
 }
 
 let nameInput = document.getElementById("name");
@@ -35,18 +27,12 @@ startButton.addEventListener("click", () => {
         alertP.textContent = 'الاسم موجود بالفعل!';
         return;
       }
-      // data.map(player => {
-      //   if (player.name == nameInputValue) {
-      //     alertP.textContent = 'الاسم موجود بالفعل!';
-      //     return;
-      //   } 
-      // })
-      else{
+      else {
         fetch('https://66eda70e380821644cdd9b53.mockapi.io/login', {
           method: 'POST',
           body: JSON.stringify({
             name: nameInputValue,
-            score: '',
+            score: 0,
           }),
           headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -54,13 +40,9 @@ startButton.addEventListener("click", () => {
         })
           .then((response) => response.json())
           .then((data) => {
-            console.log(data);
             localStorage.setItem('playerId', data.id);
-            localStorage.setItem('playerName', data.name);
             window.location.href = "game.html";
           });
       }
     });
-
-  
 })

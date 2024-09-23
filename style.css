@@ -196,6 +196,7 @@ body {
     .idea{
         width: 52vw;
         color: #656565;
+        text-align: right;
     }
 
     .input-container input {
@@ -301,6 +302,7 @@ body {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        text-align: center;
         direction: rtl;
     }
     
@@ -311,6 +313,7 @@ body {
     .idea{
         width: 42vw;
         color: #656565;
+        text-align: right;
     }
 
     .input-container input {
@@ -417,6 +420,7 @@ body {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        text-align: center;
         direction: rtl;
     }
 
@@ -427,6 +431,7 @@ body {
     .idea{
         width: 32vw;
         color: #656565;
+        text-align: right;
     }
     
     .input-container input {
