@@ -61,41 +61,49 @@ function timer() {
         if (sec < 0 || countScore == 6) { 
             clearInterval(interval);
             interval = null;
-            // alert("Time's up!");
-            container.innerHTML = '';
-            // 
-            let div = document.createElement("div");
-            let timeoutText = document.createElement("h1");
-            let winText = document.createElement("h2");
-            let scoreText = document.createElement("h2");
-
-            div.classList.add("timeout-div");
-
-            
-            if(countScore == 6){
-                timeoutText.textContent = "مبروووووك";
-            }else{
-                timeoutText.textContent = "انتهى الوقت";
+            if(sec < 0){
+                localStorage.setItem('timesUp', true);
             }
+
+            window.location.href = "resutl.html";
+            
+            localStorage.setItem('secondScore', countScore);
+
+            // alert("Time's up!");
+//             container.innerHTML = '';
+//             // 
+//             let div = document.createElement("div");
+//             let timeoutText = document.createElement("h1");
+//             let winText = document.createElement("h2");
+//             let scoreText = document.createElement("h2");
+
+//             div.classList.add("timeout-div");
+
+            
+//             if(countScore == 6){
+//                 timeoutText.textContent = "مبروووووك";
+//             }else{
+//                 timeoutText.textContent = "انتهى الوقت";
+//             }
             
 
-            // timeoutText.textContent = "انتهى الوقت";
+//             // timeoutText.textContent = "انتهى الوقت";
 
-            let finalScore = countScore + Number(localStorage.getItem('firstScore'));
+//             let finalScore = countScore + Number(localStorage.getItem('firstScore'));
 
-            if(finalScore >= 6){
-            winText.textContent = "لقد فزت يا " + localStorage.getItem('playerId') + " !"
-            }else{
-            winText.textContent = "حظ أوفر يا " + localStorage.getItem('playerId') + " !"
-            };
+//             if(finalScore >= 6){
+//             winText.textContent = "لقد فزت يا " + localStorage.getItem('playerId') + " !"
+//             }else{
+//             winText.textContent = "حظ أوفر يا " + localStorage.getItem('playerId') + " !"
+//             };
             
             
-            scoreText.textContent = `درجتك: ${finalScore} / 12`; //12
-            div.appendChild(timeoutText);
-            div.appendChild(winText);
-            div.appendChild(scoreText);
-            container.appendChild(div);
-            // 
+//             scoreText.textContent = `درجتك: ${finalScore} / 12`; //12
+//             div.appendChild(timeoutText);
+//             div.appendChild(winText);
+//             div.appendChild(scoreText);
+//             container.appendChild(div);
+//             // 
         }
         }, 1000);
     }

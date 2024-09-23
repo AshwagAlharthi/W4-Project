@@ -12,12 +12,14 @@ let countDown = 3;
 
 let levelText = document.createElement("h1");
 let countText = document.createElement("h1");
+// let bgImage = document.createElement("img");
 levelContainer.appendChild(levelText);
 levelContainer.appendChild(countText);
-
+// levelContainer.appendChild(bgImage);
 
 levelText.textContent = "المستوى الأول";
 countText.textContent = countDown;
+// bgImage.src = "./map.png";
 
 let displyInterval = setInterval(() => {
     if(countDown > 0){

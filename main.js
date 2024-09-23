@@ -1,3 +1,19 @@
+if((localStorage.getItem('firstScore'))){
+  localStorage.removeItem('firstScore')
+}
+
+if((localStorage.getItem('secondScore'))){
+  localStorage.removeItem('secondScore')
+}
+
+if((localStorage.getItem('playerId'))){
+  localStorage.removeItem('playerId')
+}
+
+if((localStorage.getItem('playerName'))){
+  localStorage.removeItem('playerName')
+}
+
 let nameInput = document.getElementById("name");
 let startButton = document.getElementById("startButton");
 let alertP = document.getElementById("alertP");
@@ -30,6 +46,7 @@ startButton.addEventListener("click", () => {
           method: 'POST',
           body: JSON.stringify({
             name: nameInputValue,
+            score: '',
           }),
           headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -38,7 +55,8 @@ startButton.addEventListener("click", () => {
           .then((response) => response.json())
           .then((data) => {
             console.log(data);
-            localStorage.setItem('playerId', data.name);
+            localStorage.setItem('playerId', data.id);
+            localStorage.setItem('playerName', data.name);
             window.location.href = "game.html";
           });
       }
