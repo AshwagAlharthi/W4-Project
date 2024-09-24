@@ -10,6 +10,7 @@ if ((localStorage.getItem('timesUp'))) {
 let playerId = localStorage.getItem('playerId');
 let firstScore;
 let finalScore;
+let interval;
 let container = document.getElementById("image-container");
 let beforeDisplay = document.getElementById("before-display");
 let levelContainer = document.getElementById("level-container");
@@ -34,32 +35,18 @@ let clicks = {
     'saudiFlag2': 0,
 };
 
-fetch('https://66eda70e380821644cdd9b53.mockapi.io/login')
-    .then((response) => response.json())
-    .then((data) => {
-        let gamePlayer = data.find(player => player.id == playerId);
-
-        if (gamePlayer) {
-            firstScore = gamePlayer.score;
-
-        } else {
-            console.log('The player not found!');
-            return;
-        }
-    });
-
 levelContainer.appendChild(levelText);
 levelContainer.appendChild(countText);
 
 levelText.textContent = "المستوى الثاني";
 countText.textContent = countDown;
 
-let displyInterval = setInterval(() => {
+let displayInterval = setInterval(() => {
     if (countDown > 0) {
         countText.textContent = countDown;
         countDown--;
     } else {
-        clearInterval(displyInterval);
+        clearInterval(displayInterval);
         beforeDisplay.style.display = 'none';
         content.style.display = 'block';
         timer();
@@ -83,8 +70,6 @@ countingScore(princess, 'princess');
 countingScore(sword, 'sword');
 countingScore(saudiLogo, 'saudiLogo');
 countingScore(saudiFlag2, 'saudiFlag2');
-
-let interval;
 
 function timer() {
     let timer = document.getElementById("timer");
@@ -110,7 +95,22 @@ function timer() {
                     localStorage.setItem('timesUp', true);
                 }
 
-                finalScore = firstScore + countScore;
+                fetchAndUpdateScore();
+            }
+        }, 1000);
+    }
+};
+
+function fetchAndUpdateScore() {
+    fetch('https://66eda70e380821644cdd9b53.mockapi.io/login')
+    .then((response) => response.json())
+    .then((data) => {
+        let gamePlayer = data.find(player => player.id == playerId);
+
+        if (gamePlayer) {
+            firstScore = gamePlayer.score;
+            
+            finalScore = firstScore + countScore;
 
                 fetch(`https://66eda70e380821644cdd9b53.mockapi.io/login/${playerId}`, {
                     method: 'PUT',
@@ -123,9 +123,11 @@ function timer() {
                 })
                     .then((response) => response.json())
                     .then(() => {
-                        window.location.href = "resutl.html";
+                        window.location.href = "result.html";
                     });
-            }
-        }, 1000);
-    }
+        } else {
+            console.log('The player not found!');
+            return;
+        }
+    });  
 };

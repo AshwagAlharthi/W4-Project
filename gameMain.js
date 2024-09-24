@@ -8,6 +8,7 @@ if ((localStorage.getItem('timesUp'))) {
 }
 
 let playerId = localStorage.getItem('playerId');
+let interval;
 let container = document.getElementById("image-container");
 let beforeDisplay = document.getElementById("before-display");
 let levelContainer = document.getElementById("level-container");
@@ -38,12 +39,12 @@ levelContainer.appendChild(countText);
 levelText.textContent = "المستوى الأول";
 countText.textContent = countDown;
 
-let displyInterval = setInterval(() => {
+let displayInterval = setInterval(() => {
     if (countDown > 0) {
         countText.textContent = countDown;
         countDown--;
     } else {
-        clearInterval(displyInterval);
+        clearInterval(displayInterval);
         beforeDisplay.style.display = 'none';
         content.style.display = 'block';
         timer();
@@ -67,8 +68,6 @@ countingScore(saudiFlag, 'saudiFlag');
 countingScore(almasmak, 'almasmak');
 countingScore(almamlakah, 'almamlakah');
 countingScore(palm, 'palm');
-
-let interval;
 
 function timer() {
     let timer = document.getElementById("timer");
