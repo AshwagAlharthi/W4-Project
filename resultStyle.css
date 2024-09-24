@@ -52,6 +52,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     border: 2px solid #2e7950;
     direction: rtl;
     color: #2e7950;
